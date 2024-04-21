@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    tools:context=".ui.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.MainActivity">
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#6B240C"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center_vertical"
+            android:paddingStart="25dp"
+            android:paddingEnd="20dp"
+            android:text="@string/app_name"
+            android:textColor="#F5CCA0"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/icon_restaurant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivPicture"
+            android:layout_width="415dp"
+            android:layout_height="228dp"
+            android:contentDescription="@string/title"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/tvAppName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/title"
+            android:textColor="#481E14"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivPicture" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/description"
+            android:textColor="#481E14"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+
+        <TextView
+            android:id="@+id/tvReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/write_your_review_here"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            app:boxStrokeWidth="3dp"
+            app:boxStrokeColor="#6B240C"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:hint="@string/review"
+            android:fontFamily="@font/montserrat_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvReview">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="15sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#6B240C"
+            android:text="@string/send"
+            android:textColor="#F5CCA0"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:fontFamily="@font/montserrat_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputLayout" />
+
+        <View
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="#EEEEEE"
+            app:layout_constraintTop_toBottomOf="@id/btnSend"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#6B240C"
+            app:layout_constraintTop_toBottomOf="@id/space"
+            app:layout_constraintBottom_toTopOf="@id/rvReview" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="16dp"
+            android:overScrollMode="never"
+            android:scrollbarSize="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/space" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

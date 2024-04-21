@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Restaurant Review</string>
+    <string name="title">judul</string>
+    <string name="write_your_review_here">Write your Review here...</string>
+    <string name="description">Thank you for visiting, you can provide a review in the form of criticism or suggestions for everything, both our service and our dishes</string>
+    <string name="send">Send</string>
+    <string name="review">Review</string>
+</resources>
